@@ -1,0 +1,63 @@
+/* FONT FACE - font-display: fallback; */
+@font-face {
+  font-family: "esbi";
+  src: url("../fonts/ElleBaskerville-SemiBoldItalic.woff2") format("woff2"),
+    url("../fonts/ElleBaskerville-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "ei";
+  src: url("../fonts/ElleBaskerville-Italic.woff2") format("woff2"),
+    url("../fonts/ElleBaskerville-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "ebi";
+  src: url("../fonts/ElleBaskerville-BoldItalic.woff2") format("woff2"),
+    url("../fonts/ElleBaskerville-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "eb";
+  src: url("../fonts/ElleBaskerville-Bold.woff2") format("woff2"),
+    url("../fonts/ElleBaskerville-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "esb";
+  src: url("../fonts/ElleBaskerville-SemiBold.woff2") format("woff2"),
+    url("../fonts/ElleBaskerville-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "e";
+  src: url("../fonts/ElleBaskerville.woff2") format("woff2"),
+    url("../fonts/ElleBaskerville.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "ah";
+  src: url("../fonts/Avenir-Heavy.woff2") format("woff2"),
+    url("../fonts/Avenir-Heavy.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
