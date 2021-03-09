@@ -9,7 +9,8 @@ let menutop = $(".header__top");
 
 $(document).on("scroll", function (params) {
   let scrollY = window.pageYOffset;
-  if (scrollY >= 700) {
+  let screenWidth = $(window).width();
+  if (scrollY >= 700 || screenWidth < 768) {
     menutop.addClass("active");
   } else {
     menutop.removeClass("active");
@@ -32,7 +33,9 @@ $(".overlay-main").on("click", function (e) {
   $("body").toggleClass("menu-isshow");
   checkClassMenuIsShow();
 });
-$(".slider__menu").on("click", function (e) {
+$(".slider__menu, .hambuger-icon").on("click", function (e) {
+  e.stopPropagation();
+  console.log("ok");
   $("body").toggleClass("menu-isshow");
 
   checkClassMenuIsShow();
