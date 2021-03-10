@@ -19,6 +19,19 @@
 <header class="header-product">
     <div class="header__top">
         <div class="container">
+
+            <div class="hambuger-nav">
+                <div class="nav-left">
+                    <span></span>
+                    <h1 class="hidden">Furnitown</h1>
+                    <p class="hambuger-icon text-main">MENU</p>
+                </div>
+
+                <div class="nav-right">
+                    <a href="#"><img src="/img/homepage/logo_icon.png" alt="logo_icon"></a>
+                </div>
+            </div>
+
             <nav>
                 <li><a href="../index.html">Furnitown</a></li>
                 <li><a href="product.html">Sản phẩm</a></li>
@@ -34,7 +47,7 @@
     <nav>
         <div class="container-fluid">
             <li>
-                <a href="../index.html">Funitow</a>
+                <a href="../index.html">Funitown</a>
             </li>
             <li>
                 <a href="#">Share <i class="arrow-icon"><img src="../img/homepage/arrow.png" alt="arrow"></i></a>
@@ -68,7 +81,45 @@
 </header>
 
 <body>
+
+    <div class="menu-full">
+        <div class="menu-full__header">
+            <span class="text-main header-left">Furnitown</span>
+
+            <div class="header-right">
+                <span class="text-main">Follow Us</span>
+                <a href="#"><img src="../img/homepage/email.svg" alt="email"></a>
+                <a href="#"><img src="../img/homepage/facebook.svg" alt="facebook"></a>
+            </div>
+        </div>
+
+        <div class="menu-full__main">
+            <div class="row">
+                <div class="menu-full__main-left col-4">
+                    <div class="logo"><a href="#">
+                            <img src="../img/homepage/logo.svg" alt="logo"></a>
+                    </div>
+                    <div class="close">
+                        <img src="../img/homepage/cancel.svg" alt="cancel">
+                    </div>
+                </div>
+                <div class="menu-full__main-right col-8">
+                    <ul>
+                        <li><a href="../index.html">Furnitown</a></li>
+                        <li><a href="product.html">Sản phẩm</a></li>
+                        <li><a href="#">Dịch vụ</a></li>
+                        <li><a href="#">Dự án</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <main class="productpage">
+        <div class="overlay-main">
+        </div>
+
         <div class="slider-wrapper">
             <div class="slider-item">
                 <img src="../img/product/banner.jpg" alt="banner">
@@ -82,24 +133,28 @@
 
 
         <div class="product">
-            <div class="container pd">
+            <div class="container pd component">
                 <div class="product__text row">
-                    <div class="product__text-des col-lg-8">
+                    <div class="product__text-des col-lg-8 col-sm-12">
                         <span class="number">01</span>
-                        <p class="text-product"> Phòng làm việc</p>
-                        <p class="text-product">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptate
-                            officia
-                            repellat explicabo
-                            facere iusto, sapiente vel nam vero soluta commodi nulla molestias cumque similique amet
-                            suscipit praesentium accusamus nostrum.</p>
+
+                        <div class="text-content">
+                            <p> Phòng làm việc</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptate
+                                officia
+                                repellat explicabo
+                                facere iusto, sapiente vel nam vero soluta commodi nulla molestias cumque similique amet
+                                suscipit praesentium accusamus nostrum.</p>
+                        </div>
+
                     </div>
-                    <div class="product__text-all col-lg-4">
-                        <p class="text-product">Tất cả</p>
+                    <div class="product__text-all col-lg-4 col-sm-12">
+                        <a href="#" class="text-product">Tất cả</a>
                     </div>
                 </div>
 
                 <div class="product__item row">
-                    <div class="product__item-col col-4">
+                    <div class="product__item-col col-lg-4 col-sm-12">
                         <div class="img-product">
                             <img src="../img/product/chair.jpg" alt="chair">
                         </div>
@@ -111,9 +166,9 @@
                         </div>
                     </div>
 
-                    <div class="product__item-col col-4">
+                    <div class="product__item-col col-lg-4 col-sm-12">
                         <div class="img-product">
-                            <img src="../img/product/chair.jpg" alt="chair">
+                            <img src="../img/product/chair_2.jpg" alt="chair">
                         </div>
 
                         <div class="txt-product">
@@ -123,9 +178,9 @@
                         </div>
                     </div>
 
-                    <div class="product__item-col col-4">
+                    <div class="product__item-col col-lg-4 col-sm-12">
                         <div class="img-product">
-                            <img src="../img/product/chair.jpg" alt="chair">
+                            <img src="../img/product/chair_3.jpg" alt="chair">
                         </div>
 
                         <div class="txt-product">
@@ -137,24 +192,28 @@
                 </div>
             </div>
 
-            <div class="container pd">
+            <div class="container pd component">
                 <div class="product__text row">
-                    <div class="product__text-des col-lg-8">
-                        <span class="number">01</span>
-                        <p class="text-product"> Phòng làm việc</p>
-                        <p class="text-product">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptate
-                            officia
-                            repellat explicabo
-                            facere iusto, sapiente vel nam vero soluta commodi nulla molestias cumque similique amet
-                            suscipit praesentium accusamus nostrum.</p>
+                    <div class="product__text-des col-lg-8 col-sm-12">
+                        <span class="number">02</span>
+
+                        <div class="text-content">
+                            <p> Phòng ngủ</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptate
+                                officia
+                                repellat explicabo
+                                facere iusto, sapiente vel nam vero soluta commodi nulla molestias cumque similique amet
+                                suscipit praesentium accusamus nostrum.</p>
+                        </div>
+
                     </div>
-                    <div class="product__text-all col-lg-4">
-                        <p class="text-product">Tất cả</p>
+                    <div class="product__text-all col-lg-4 col-sm-12">
+                        <a href="#" class="text-product">Tất cả</a>
                     </div>
                 </div>
 
                 <div class="product__item row">
-                    <div class="product__item-col col-4">
+                    <div class="product__item-col col-lg-4 col-sm-12">
                         <div class="img-product">
                             <img src="../img/product/chair.jpg" alt="chair">
                         </div>
@@ -166,7 +225,54 @@
                         </div>
                     </div>
 
-                    <div class="product__item-col col-4">
+                    <div class="product__item-col col-lg-4 col-sm-12">
+                        <div class="img-product">
+                            <img src="../img/product/chair_2.jpg" alt="chair">
+                        </div>
+
+                        <div class="txt-product">
+                            <p class="text-product">Ghế gỗ sồi loại 1</p>
+                            <p class="price-product">700.000 VND</p>
+                            <div class="btn">Chi tiết</div>
+                        </div>
+                    </div>
+
+                    <div class="product__item-col col-lg-4 col-sm-12">
+                        <div class="img-product">
+                            <img src="../img/product/chair_3.jpg" alt="chair">
+                        </div>
+
+                        <div class="txt-product">
+                            <p class="text-product">Ghế gỗ sồi loại 1</p>
+                            <p class="price-product">700.000 VND</p>
+                            <div class="btn">Chi tiết</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container pd component">
+                <div class="product__text row">
+                    <div class="product__text-des col-lg-8 col-sm-12">
+                        <span class="number">03</span>
+
+                        <div class="text-content">
+                            <p> Nhà bếp</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptate
+                                officia
+                                repellat explicabo
+                                facere iusto, sapiente vel nam vero soluta commodi nulla molestias cumque similique amet
+                                suscipit praesentium accusamus nostrum.</p>
+                        </div>
+
+                    </div>
+                    <div class="product__text-all col-lg-4 col-sm-12">
+                        <a href="#" class="text-product">Tất cả</a>
+                    </div>
+                </div>
+
+                <div class="product__item row">
+                    <div class="product__item-col col-lg-4 col-sm-12">
                         <div class="img-product">
                             <img src="../img/product/chair.jpg" alt="chair">
                         </div>
@@ -178,9 +284,139 @@
                         </div>
                     </div>
 
-                    <div class="product__item-col col-4">
+                    <div class="product__item-col col-lg-4 col-sm-12">
+                        <div class="img-product">
+                            <img src="../img/product/chair_2.jpg" alt="chair">
+                        </div>
+
+                        <div class="txt-product">
+                            <p class="text-product">Ghế gỗ sồi loại 1</p>
+                            <p class="price-product">700.000 VND</p>
+                            <div class="btn">Chi tiết</div>
+                        </div>
+                    </div>
+
+                    <div class="product__item-col col-lg-4 col-sm-12">
+                        <div class="img-product">
+                            <img src="../img/product/chair_3.jpg" alt="chair">
+                        </div>
+
+                        <div class="txt-product">
+                            <p class="text-product">Ghế gỗ sồi loại 1</p>
+                            <p class="price-product">700.000 VND</p>
+                            <div class="btn">Chi tiết</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container pd component">
+                <div class="product__text row">
+                    <div class="product__text-des col-lg-8 col-sm-12">
+                        <span class="number">04</span>
+
+                        <div class="text-content">
+                            <p> Phòng khách</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptate
+                                officia
+                                repellat explicabo
+                                facere iusto, sapiente vel nam vero soluta commodi nulla molestias cumque similique amet
+                                suscipit praesentium accusamus nostrum.</p>
+                        </div>
+
+                    </div>
+                    <div class="product__text-all col-lg-4 col-sm-12">
+                        <a href="#" class="text-product">Tất cả</a>
+                    </div>
+                </div>
+
+                <div class="product__item row">
+                    <div class="product__item-col col-lg-4 col-sm-12">
                         <div class="img-product">
                             <img src="../img/product/chair.jpg" alt="chair">
+                        </div>
+
+                        <div class="txt-product">
+                            <p class="text-product">Ghế gỗ sồi loại 1</p>
+                            <p class="price-product">700.000 VND</p>
+                            <div class="btn">Chi tiết</div>
+                        </div>
+                    </div>
+
+                    <div class="product__item-col col-lg-4 col-sm-12">
+                        <div class="img-product">
+                            <img src="../img/product/chair_2.jpg" alt="chair">
+                        </div>
+
+                        <div class="txt-product">
+                            <p class="text-product">Ghế gỗ sồi loại 1</p>
+                            <p class="price-product">700.000 VND</p>
+                            <div class="btn">Chi tiết</div>
+                        </div>
+                    </div>
+
+                    <div class="product__item-col col-lg-4 col-sm-12">
+                        <div class="img-product">
+                            <img src="../img/product/chair_3.jpg" alt="chair">
+                        </div>
+
+                        <div class="txt-product">
+                            <p class="text-product">Ghế gỗ sồi loại 1</p>
+                            <p class="price-product">700.000 VND</p>
+                            <div class="btn">Chi tiết</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container pd component">
+                <div class="product__text row">
+                    <div class="product__text-des col-lg-8 col-sm-12">
+                        <span class="number">05</span>
+
+                        <div class="text-content">
+                            <p> Nhà tắm</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptate
+                                officia
+                                repellat explicabo
+                                facere iusto, sapiente vel nam vero soluta commodi nulla molestias cumque similique amet
+                                suscipit praesentium accusamus nostrum.</p>
+                        </div>
+
+                    </div>
+                    <div class="product__text-all col-lg-4 col-sm-12">
+                        <a href="#" class="text-product">Tất cả</a>
+                    </div>
+                </div>
+
+                <div class="product__item row">
+                    <div class="product__item-col col-lg-4 col-sm-12">
+                        <div class="img-product">
+                            <img src="../img/product/chair.jpg" alt="chair">
+                        </div>
+
+                        <div class="txt-product">
+                            <p class="text-product">Ghế gỗ sồi loại 1</p>
+                            <p class="price-product">700.000 VND</p>
+                            <div class="btn">Chi tiết</div>
+                        </div>
+                    </div>
+
+                    <div class="product__item-col col-lg-4 col-sm-12">
+                        <div class="img-product">
+                            <img src="../img/product/chair_2.jpg" alt="chair">
+                        </div>
+
+                        <div class="txt-product">
+                            <p class="text-product">Ghế gỗ sồi loại 1</p>
+                            <p class="price-product">700.000 VND</p>
+                            <div class="btn">Chi tiết</div>
+                        </div>
+                    </div>
+
+                    <div class="product__item-col col-lg-4 col-sm-12">
+                        <div class="img-product">
+                            <img src="../img/product/chair_3.jpg" alt="chair">
                         </div>
 
                         <div class="txt-product">
@@ -196,7 +432,36 @@
     </main>
 </body>
 
-<footer></footer>
+
+<footer class="footer-product">
+    <div class="footer">
+        <div class="container">
+
+            <div class="footer__contact">
+                <div class="footer__contact-logo">
+                    <img src="../img/homepage/logo full.png" alt="logo">
+
+                    <span></span>
+                </div>
+
+                <div class="footer__contact-address">
+                    <p class="text-footer-logo">THỜI GIAN MỞ CỬA: 8H - 18H - THỨ 2 ĐẾN CHỦ NHẬT <br> SỐ 7/22A, ẤP 6, XÃ
+                        ĐÔNG
+                        THẠNH,
+                        HUYỆN HÓC MÔN, THÀNH PHỐ HỒ CHÍ MINH <br>HOTLINE: 0937.168.938 <br> EMAIL:
+                        NOITHATFUNITOWN@GMAIL.COM
+                    </p>
+
+                    <div class="footer__contact-backToTop">
+                        <a class="backToTop" href="#">BACK TO TOP</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</footer>
 
 
 <script type="text/javascript" src="../dest/jsmain.min.js"></script>
