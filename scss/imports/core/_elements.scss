@@ -1,0 +1,106 @@
+// css button, title, icon, elements...
+img {
+  max-width: 100%;
+}
+
+.button-main {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  max-width: 160px;
+  height: 36px;
+  border-radius: 5%;
+  background: #000;
+  @include mid(true);
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    background: #000;
+    opacity: 0.7;
+    border-radius: 50%;
+    z-index: 0;
+    @include transition($t);
+  }
+
+  &:hover {
+    &:after {
+      width: 180px;
+      height: 180px;
+      background-color: $yellow-bg-cl;
+      @include transition($t);
+    }
+  }
+}
+
+.title-main {
+  @include text(80px, e, normal, #fff, uppercase);
+}
+
+.text-main {
+  @include text(12px, Arial, normal, #fff, uppercase);
+}
+
+.text-product {
+  @include text(18px, ah, normal, #000, uppercase);
+}
+
+.price-product {
+  @include text(12px, Arial, normal, #000, uppercase);
+}
+
+.text-footer {
+  @include text(18px, ei, 3, #fff, normal);
+  text-align: right;
+  b {
+    color: #caa448;
+  }
+}
+
+.price-text-detail {
+  @include text(12px, e, 6, #5b4816, uppercase);
+  font-weight: bold;
+}
+
+.price-detail {
+  @include text(16px, Arial, 4.4, #5b4816, uppercase);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.text-detail {
+  @include text(14px, Arial, 3, #000, none);
+}
+
+.text-footer-logo {
+  @include text(11px, Arial, 2, #fff, uppercase);
+  text-align: center;
+}
+
+.title-detail {
+  @include text(32px, e, normal, #000, none);
+}
+
+.des-product {
+  @include text(12px, Arial, normal, #000, none);
+  line-height: 3;
+  b {
+    font-weight: bold;
+  }
+}
+
+.backToTop {
+  @include text(10px, Arial, normal, #aaaaaa, none);
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.component {
+  &:not(:last-child) {
+    border-bottom: 1px solid #aaa;
+  }
+}

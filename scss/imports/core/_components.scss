@@ -1,0 +1,399 @@
+// css components
+
+// ? --------- BOX-MAIN --------- ? //
+.box-main {
+  .title-main {
+    text-align: center;
+    padding: 8px 0;
+  }
+  .text-main {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
+
+  .button-main {
+    margin: 0 auto;
+
+    .text-button {
+      z-index: 2;
+      @include text(11px, ah, normal, #fff, uppercase);
+    }
+  }
+}
+
+// ? --------- MENU-BOX --------- ? //
+.menu-box {
+  // !TODO: default (draft comment)
+  width: 180px;
+  height: 180px;
+  background-color: $blue-bg-cl;
+
+  // !TODO: horver (draft comment)
+  // width: 210px;
+  // height: 180px;
+  // background-color: #fff;
+
+  @include mid(true);
+  flex-direction: column;
+  cursor: pointer;
+  @include transition($t);
+
+  .menu-default {
+    display: block;
+    .icon-logo {
+      margin-bottom: 20px;
+
+      .logo-icon-black {
+        display: none;
+      }
+    }
+    .icon-hambuger {
+      position: relative;
+      height: 20px;
+      width: 40px;
+
+      span {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 2px;
+        display: block;
+        background-color: #fff;
+        &::after,
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          display: block;
+          background-color: #fff;
+        }
+
+        &::before {
+          bottom: 10px;
+        }
+
+        &::after {
+          top: 10px;
+        }
+      }
+    }
+  }
+
+  .menu-hover {
+    width: 100%;
+    height: 100%;
+    // display: flex;
+    display: none;
+    justify-content: center;
+    margin-top: 20px;
+
+    .left {
+      height: 50%;
+      position: relative;
+      .text-main {
+        position: absolute;
+        bottom: 0;
+        color: $black-cl;
+        text-transform: capitalize;
+        font-size: 14px;
+        line-height: 0px;
+        font-family: ah;
+      }
+    }
+
+    .right {
+      height: 50%;
+      img {
+        max-width: initial;
+        position: relative;
+      }
+
+      span {
+        content: "";
+        position: absolute;
+        width: 0px;
+        height: 2px;
+        background-color: #000;
+        display: block;
+        bottom: 0;
+        left: 0;
+
+        @include transition($t);
+      }
+    }
+  }
+
+  &:hover {
+    width: 210px;
+    height: 180px;
+    background-color: #fff;
+    @include transition($t);
+
+    .menu-default {
+      display: none;
+    }
+
+    .menu-hover {
+      display: flex;
+
+      .right {
+        span {
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80%;
+          @include transition($t);
+        }
+      }
+    }
+  }
+
+  @include xs {
+    display: none;
+  }
+}
+
+// ? --------- PRODUCT HOME--------- ? //
+.product-box {
+  .text-product {
+    padding: 50px 0;
+  }
+  .img-product {
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+    cursor: pointer;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      overflow: hidden;
+      opacity: 0;
+      background-color: rgba(196, 140, 44, 0);
+      @include transition($t);
+
+      &-content {
+        > img {
+          width: 30px;
+          height: 30px;
+        }
+
+        p {
+          padding: 20px 0;
+        }
+      }
+
+      .wrap-btn {
+        @include mid(true);
+
+        a {
+          text-decoration: none;
+          @include text(11px, ah, normal, #fff, normal);
+          margin-left: 20px;
+        }
+        > img {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+
+    img {
+      @include transition($t);
+      transform: scale(1);
+      display: block;
+    }
+    &:hover {
+      .overlay {
+        opacity: 1;
+        background-color: rgba(196, 140, 44, 0.6);
+        @include transition($t);
+      }
+
+      > img {
+        transform: scale(1.2);
+        @include transition($t);
+      }
+    }
+  }
+}
+
+// ? --------- PRODUCT PAGES --------- ? //
+.product {
+  &__text {
+    &-des {
+      display: flex;
+      .number {
+        @include text(90px, ah, normal, #c48b2c, normal);
+      }
+
+      .text-content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        :nth-child(1) {
+          @include text(18px, e, normal, #000, uppercase);
+        }
+        :nth-child(2) {
+          max-width: 430px;
+          @include text(12px, Arial, normal, #000, normal);
+        }
+      }
+
+      @include sm {
+        .text-content {
+          :nth-child(2) {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+
+    &-all {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      a {
+        font-size: 12px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__item {
+    height: 100%;
+    &-col {
+      &:not(:last-child) {
+        border-right: 1px solid #aaa;
+      }
+    }
+
+    .img-product {
+      height: 60%;
+      overflow: hidden;
+      object-fit: cover;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .txt-product {
+      * {
+        margin-top: 25px;
+      }
+
+      .detail-btn {
+        text-decoration: none;
+        padding-left: 20px;
+        display: block;
+        color: #000;
+      }
+    }
+
+    @include sm {
+      &-col {
+        margin-bottom: 30px;
+        max-height: 625px;
+      }
+
+      &-col {
+        &:not(:last-child) {
+          border: initial;
+        }
+      }
+      .img-product {
+        margin: 0 auto;
+        height: 45vh;
+      }
+    }
+  }
+}
+// ? --------- OVERLAY MAIN --------- ? //
+
+.overlay-main {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  z-index: 150;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+// ? --------- DESCRIPTION DETAIL--------- ? //
+.des-detail {
+  h4 {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 26px;
+  }
+  p {
+    font-size: 11px;
+  }
+}
+
+// ? --------- CONTROL NEXT - PREV --------- ? //
+
+.slider__control {
+  position: absolute;
+  bottom: 24px;
+  right: 40px;
+  width: 88px;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-next,
+  &-prev {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    @include mid(true);
+    cursor: pointer;
+    @include transition($t);
+
+    i {
+      width: 40px;
+      height: 40px;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &:hover {
+      background-color: $yellow-bg-cl;
+      opacity: 0.8;
+      @include transition($t);
+    }
+  }
+
+  &-prev {
+    @include mid(true);
+    img {
+      transform: rotate(180deg);
+    }
+  }
+
+  @include xs {
+    right: 0;
+  }
+}
+
+.button-group {
+  @include mid(true);
+  p {
+    color: #fff;
+  }
+}

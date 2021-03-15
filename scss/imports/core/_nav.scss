@@ -1,0 +1,106 @@
+// css navigator (Menu)
+.menu-full {
+  position: fixed;
+  height: 100vh;
+  width: 500px;
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  transition: 0.3s;
+  background-color: #000;
+  display: block;
+  z-index: 200;
+  &__header {
+    padding: 30px;
+    height: var(--heighHeader);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-right {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .text-main {
+        margin: 0 10px;
+      }
+      a {
+        width: 20px;
+        height: 20px;
+        margin: 0 10px;
+        img {
+          width: 20px;
+          height: 20px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__main {
+    height: 100%;
+    width: 100%;
+    &-left {
+      padding-left: 30px !important;
+      .logo {
+        a {
+          img {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+
+      .close {
+        position: relative;
+        padding-top: 30px;
+        cursor: pointer;
+        &::before {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 80px;
+          left: -15px;
+          top: 10px;
+          background-color: rgba(255, 255, 255, 0.8);
+        }
+        width: 50px;
+        height: 50px;
+        img {
+          width: 50px;
+          height: 50px;
+          display: block;
+        }
+      }
+    }
+
+    &-right {
+      height: 420px;
+      ul {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        li {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 26px;
+            font-family: e;
+            padding-bottom: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  @include sm {
+    width: 100vw;
+  }
+}
